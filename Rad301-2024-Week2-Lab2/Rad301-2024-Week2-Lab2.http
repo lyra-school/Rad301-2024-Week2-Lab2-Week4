@@ -1,0 +1,55 @@
+﻿@Rad301-2024-Week2-Lab2_HostAddress = http://localhost:5052
+
+GET {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/
+
+###
+
+POST {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/
+Content-Type: application/json
+
+{
+    "description": "an ad",
+    "price": 10.00,
+    "sellerId":"1",
+    "categoryId":"1"
+}
+###
+
+POST {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/categories
+Content-Type: application/json
+
+{
+    "description":"a category"
+}
+###
+
+POST {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/sellers
+Content-Type: application/json
+
+{
+    "name":"a seller"
+}
+###
+
+PUT {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/1
+Content-Type: application/json
+
+{
+    "description": "en edited ad",
+    "price": 15.00,
+    "sellerId":"1",
+    "categoryId":"1"
+}
+###
+
+DELETE {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/1
+
+###
+
+GET {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/sellers/collection/1
+
+###
+
+GET {{Rad301-2024-Week2-Lab2_HostAddress}}/ads/categories/collection/1
+
+###
